@@ -19,7 +19,7 @@ const App = () => {
         </a>
       </div>
       <h1>Hello World everyone!</h1>
-      <MyComponentonent />
+      <MyComponent />
       <SecondComponent />
       <ThirdComponent />
 
