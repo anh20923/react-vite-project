@@ -18,8 +18,19 @@ const App = () => {
     country: "vietnam"
   }
 
+  //create random id
+  const randomIntFromInterval = (min, max) => { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+
   const addNewTodo = (name) => {
-    alert(`call me ${name}`)
+    const newTodo = {
+      id: randomIntFromInterval(1, 10000),
+      name: name
+    }
+
+    setTodoList([...todoList, newTodo])
   }
 
 
