@@ -1,15 +1,21 @@
+import { useState } from "react";
+
 const TodoNew = (props) => {
+
+    //useState hook (getter, setter)
+    // const valueInput = "";
+    const [valueInput, setValueInput] = useState("eic")
 
     //truyen function
     const { addNewTodo } = props;
     //addNewTodo("yumi")
 
     const handleClick = () => {
-        alert("click me")
+        console.log(">>>> check valueInput: ", valueInput)
     }
 
     const handleOnChange = (name) => {
-        console.log(">>>> handleOnChange", name)
+        setValueInput(name)
     }
 
     return (
@@ -17,10 +23,15 @@ const TodoNew = (props) => {
             <input type="text"
                 onChange={(event) => { handleOnChange(event.target.value) }}
             />
+
             <button
                 style={{ cursor: "pointer" }}
                 onClick={handleClick}
             >Add</button>
+
+            <div>
+                My text input is = {valueInput}
+            </div>
         </div>
     )
 }
