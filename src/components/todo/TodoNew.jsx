@@ -2,13 +2,12 @@ import { useState } from "react";
 
 const TodoNew = (props) => {
 
-    //useState hook (getter, setter)
-    // const valueInput = "";
-    const [valueInput, setValueInput] = useState("eic")
+    //userState hook (getter, setter)
+    const [valueInput, setValueInput] = useState("")
 
-    //truyen function
     const { addNewTodo } = props;
-    //addNewTodo("yumi")
+
+    // addNewTodo("lalalal")
 
     const handleClick = () => {
         addNewTodo(valueInput)
@@ -19,18 +18,17 @@ const TodoNew = (props) => {
         setValueInput(name)
     }
 
+
     return (
-        <div className='todo-new'>
+        <div className="todo-new">
             <input type="text"
                 onChange={(event) => { handleOnChange(event.target.value) }}
                 value={valueInput}
             />
-
             <button
                 style={{ cursor: "pointer" }}
                 onClick={handleClick}
             >Add</button>
-
             <div>
                 My text input is = {valueInput}
             </div>
@@ -38,4 +36,4 @@ const TodoNew = (props) => {
     )
 }
 
-export default TodoNew
+export default TodoNew;

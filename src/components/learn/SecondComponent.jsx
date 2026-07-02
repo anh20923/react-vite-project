@@ -1,14 +1,18 @@
 const SecondComponent = () => {
     return (
-        <div> Second component</div>
-    );
+        <div>
+            second component
+        </div>
+    )
 }
-
 
 const ThirdComponent = () => {
     return (
-        <div> Third component</div>
-    );
+        <div>
+            Third component
+        </div>
+    )
 }
 
-export { SecondComponent, ThirdComponent }
+
+export { SecondComponent, ThirdComponent };

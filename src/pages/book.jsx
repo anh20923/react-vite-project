@@ -1,6 +1,6 @@
 const BookPage = () => {
     return (
-        <div>Book page</div>
+        <div> Book page </div>
     )
 }
 

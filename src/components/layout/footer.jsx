@@ -1,12 +1,10 @@
-import './footer.css'
+import "./footer.css"
+
 const Footer = () => {
     return (
-        <>
-            <div className="footer">
-                <p>React Vite - AnhV</p>
-            </div>
-
-        </>
+        <div class="footer">
+            <p>React Vite - Anh V</p>
+        </div>
     )
 }
 

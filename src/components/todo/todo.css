@@ -4,7 +4,7 @@
 }
 
 .todo-title {
-    font-size: 40px;
+    font-size: 35px;
     margin: 15px 0;
     color: orange;
     text-align: center;
@@ -48,6 +48,12 @@
     filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
 @keyframes logo-spin {
     from {
         transform: rotate(0deg);
@@ -57,13 +63,6 @@
         transform: rotate(360deg);
     }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-    .logo {
-        animation: logo-spin infinite 20s linear;
-    }
-}
-
 
 .todo-item {
     display: flex;

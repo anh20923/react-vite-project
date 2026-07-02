@@ -1,40 +1,26 @@
 const TodoData = (props) => {
-    //props is an object{}
-    // {
-    //     name: "Anh",
-    //     age: 25,
-    //     data: {}
-    // }
+    const { todoList, deleteTodo } = props
 
-    //cach1: 
-    const { todoList } = props;
+    const handleClick = (id) => {
+        deleteTodo(id)
+    }
 
-    //cach2
-    //const name = props.name;
-    // const age = props.age;
-    // const data = props.data;
-
-    //cach3 khong nen lam
-
-    console.log(">>> check props: ", todoList)
     return (
-        <div className='todo-data'>
+        <div className="todo-data">
             {todoList.map((item, index) => {
-                console.log("check map: ", item, index)
+                // console.log(item, index)
                 return (
-                    <div className="todo-item">
-                        <div>{item.name}</div>
-                        <button>Delete</button>
+                    <div className="todo-item" key={item.id}>
+                        <div> {item.name} </div>
+                        <button
+                            style={{ cursor: "pointer" }}
+                            onClick={() => handleClick(item.id)}
+                        >Delete</button>
                     </div>
                 )
             })}
-
-            <div>
-                {JSON.stringify(props.todoList)}
-            </div>
         </div>
     )
-
 }
 
-export default TodoData
+export default TodoData;
