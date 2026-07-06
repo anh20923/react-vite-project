@@ -40,7 +40,7 @@ const UserTable = () => {
     //         name: 'Jim Green',
     //         age: 42,
     //         address: 'London No. 1 Lake Park',
-    //         tags: ['kawaii'],
+    //         tags: [''],
     //     },
     //     {
     //         key: '3',
