@@ -19,7 +19,12 @@ const UserForm = () => {
                 message: "create use",
                 description: "Create user successful"
             })
-        } // phai check ca 2 TH vi co the res.data = null
+        } else {
+            notification.error({
+                message: "Error create user",
+                description: JSON.stringify(res.message)
+            })
+        }
 
         console.log(">>>>> check state: ", res.data)
     }
